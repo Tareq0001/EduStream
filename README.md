@@ -4,14 +4,14 @@ EduStream is a modern, production-ready React Native (Expo) MVP designed for E-l
 
 ## Features ✨
 - **Video Streaming:** High-quality, robust video playback using `expo-av`.
-- **Backend Ready:** Pre-configured Supabase integration for authentication, database, and storage.
+- **Backend Ready:** Local Node.js Express server with SQLite database serving mock data.
 - **Cross-Platform:** Built with Expo, ready for both iOS and Android.
-- **Modern UI:** Clean, responsive, and intuitive user interface.
+- **Premium UI:** Highly polished, beautiful dark-themed interface with smooth interactions.
 
 ## Tech Stack 🛠️
 - **Frontend:** React Native, Expo
 - **Video Player:** `expo-av`
-- **Backend (BaaS):** Supabase (PostgreSQL)
+- **Backend:** Node.js, Express, SQLite3
 
 ## Project Structure 📁
 ```text
@@ -19,27 +19,33 @@ EduStream/
 ├── App.js                   # Application entry point
 ├── app.json                 # Expo configuration
 ├── package.json             # Dependencies and scripts
+├── backend/
+│   ├── server.js            # Express server
+│   └── database.js          # SQLite3 database initialization and seeding
 └── src/
     ├── components/
     │   └── VideoPlayer.js   # Reusable video player component
     ├── screens/
     │   └── HomeScreen.js    # Main course listing and player view
     └── services/
-        └── supabase.js      # Supabase client configuration
 ```
 
 ## Setup Instructions 🚀
 
-1. **Install Dependencies**
+1. **Install Frontend Dependencies**
    ```bash
    npm install
    ```
 
-2. **Configure Supabase**
-   - Create a project on [Supabase](https://supabase.com).
-   - Update `src/services/supabase.js` with your project URL and anonymous key.
+2. **Run Local Backend Server**
+   ```bash
+   cd backend
+   npm install
+   node server.js
+   ```
 
 3. **Run the App**
+   Open a new terminal in the root directory:
    ```bash
    npm start
    ```
