@@ -1,0 +1,17 @@
+{
+  "name": "@edustream/mobile",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "@nozbe/watermelondb": "^0.27.1",
+    "react": "18.2.0",
+    "react-native": "0.72.6"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.23.3",
+    "@types/react": "~18.2.14",
+    "typescript": "^5.1.3"
+  }
+}
